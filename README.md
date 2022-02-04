@@ -13,7 +13,7 @@ https://github.com/rdfjs/data-model-spec/blob/master/img/data_diagram.png
 ## Install
 
 ```
-libraryDependencies += "com.github.p2m2" %%% "data-model-rdfjs" % "1.0.0",
+libraryDependencies += "com.github.p2m2" %%% "data-model-rdfjs" % "1.0.1",
 ```
 
 ## Data Model Spec
