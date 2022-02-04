@@ -1,8 +1,9 @@
 import sbt.Keys.{testFrameworks, version}
+val static_version =  "1.0.1"
 
 def getPackageSetting = Seq(
   name := "data-model-rdfjs",
-  version :=  "1.0.1",
+  version := scala.util.Properties.envOrElse("PROG_VERSION", static_version ),
   scalaVersion := "2.13.7",
   organization := "com.github.p2m2",
   organizationName := "p2m2",

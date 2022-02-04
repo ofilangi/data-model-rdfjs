@@ -152,6 +152,7 @@ jobs:
       - run:
           name: Snapshot publication
           command: |
+            export PROG_VERSION="${CIRCLE_BRANCH}-SNAPSHOT"
             echo "Importing key"
             echo -e "$GPG_KEY" | gpg --import
             sbt publish
@@ -169,6 +170,7 @@ jobs:
       - run:
           name: Snapshot publication
           command: |
+            export PROG_VERSION="${CIRCLE_TAG}"
             echo "Importing key"
             echo -e "$GPG_KEY" | gpg --import
             sbt publish
