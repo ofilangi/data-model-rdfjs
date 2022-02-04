@@ -2,8 +2,8 @@ import sbt.Keys.{testFrameworks, version}
 
 def getPackageSetting = Seq(
   name := "data-model-rdfjs",
-  version :=  "1.0.0",
-  scalaVersion := "2.13.5",
+  version :=  "1.0.1",
+  scalaVersion := "2.13.7",
   organization := "com.github.p2m2",
   organizationName := "p2m2",
   organizationHomepage := Some(url("https://www6.inrae.fr/p2m2")),
@@ -12,8 +12,8 @@ def getPackageSetting = Seq(
   description := "Scalajs lib data-model-rdfjs",
   scmInfo := Some(
     ScmInfo(
-      url("https://github.com/p2m2/data-model-rdfjs"),
-      "scm:git@github.com:p2m2/data-model-rdfjs.git"
+      url("https://github.com/p2m2/facade-scalajs-data-model-rdfjs"),
+      "scm:git@github.com:p2m2/facade-scalajs-data-model-rdfjs.git"
     )
   ),
   developers := List(
@@ -68,8 +68,8 @@ lazy val root = project.in(file(".")).
     },
     webpackBundlingMode := BundlingMode.LibraryAndApplication(),
     libraryDependencies ++= Seq(
-      "net.exoego" %%% "scala-js-nodejs-v14" % "0.13.0",
-      "com.lihaoyi" %%% "utest" % "0.7.7" % "test"
+      "net.exoego" %%% "scala-js-nodejs-v14" % "0.14.0",
+      "com.lihaoyi" %%% "utest" % "0.7.11" % "test"
     ) ,
     testFrameworks += new TestFramework("utest.runner.Framework")
   )
