@@ -1,5 +1,5 @@
 import sbt.Keys.{testFrameworks, version}
-val static_version =  "1.0.1"
+val static_version =  "1.0.2"
 
 def getPackageSetting = Seq(
   name := "data-model-rdfjs",
@@ -69,8 +69,8 @@ lazy val root = project.in(file(".")).
     },
     webpackBundlingMode := BundlingMode.LibraryAndApplication(),
     libraryDependencies ++= Seq(
-      "net.exoego" %%% "scala-js-nodejs-v14" % "0.14.0",
-      "com.lihaoyi" %%% "utest" % "0.7.11" % "test"
+      "net.exoego" %%% "scala-js-nodejs-v16" % "0.14.0",
+      "com.lihaoyi" %%% "utest" % "0.8.1" % "test"
     ) ,
     testFrameworks += new TestFramework("utest.runner.Framework"),
     coverageMinimumStmtTotal := 86,
